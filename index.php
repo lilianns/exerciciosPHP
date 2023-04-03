@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indice</title>
 </head>
-<Body>
+<body>
     <h1>Indice</h1>
     <a href="/Exercicio1"> Exercicio1 </a>
-</Body>
+</body>
 </html>
