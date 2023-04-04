@@ -29,7 +29,6 @@ services:
 ```yaml
 docker-compose up -d
 ```
-
 5- Quando o ambiente estiver pronto, você pode acessar o código PHP em seu navegador em http://localhost:8080. 
 
 6- É importante lembrar que o arquivo `docker-compose.yml` deve estar presente no diretório raiz do projeto e o comando `docker-compose up -d` deve ser executado dentro deste diretório.
