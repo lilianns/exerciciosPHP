@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=drive-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <title> Exercicio 5 </title>
-	</head>
+    </head>
 
 <body>
     <form action="" method="get">
