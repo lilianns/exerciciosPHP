@@ -1,0 +1,48 @@
+/*  página inteira */
+body {
+    background-color: #f2f2f2;
+  }
+  
+  /* Estilo do formulário */
+  form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Estilo para o rótulo do campo */
+  label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para o campo de entrada */
+  input[type="text"] {
+    width: 100%;
+    font-size: 16px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para o botão de envio */
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Estilo para o botão de envio quando passa o mouse por cima */
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
