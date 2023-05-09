@@ -32,12 +32,12 @@
       $soma = $value1 + $value2;
       $resultado = "";
 
-    if ($soma >= 20) {
-      $resultado = $soma + 8;
-    }
-    else {
-      $resultado = $soma - 5;
-    }
+      if ($soma >= 20) {
+        $resultado = $soma + 8;
+     }
+      else {
+        $resultado = $soma - 5;
+      }
      
     echo "<div class='result'> O resultado foi $resultado </div>";
 
