@@ -12,13 +12,16 @@ class Exercicio4Cest
     }
 
     // tests
-    public function tryToTest(AcceptanceTester $I)
+    public function Exercicio4Test(AcceptanceTester $I)
     {
         $I->amOnPage("/Exercicio4");
 
-        $I->fillField("numero1", "12");
-        $I->fillField("numero2", "5");
-        $I->fillField("numero3", "1");
+        $I->fillField("numero1", "11");
+        $I->fillField("numero2", "15");
+        $I->fillField("numero3", "20");
         $I->click("Enviar");
+
+        $I->see("201511");
+
     }
 }
