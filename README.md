@@ -11,7 +11,6 @@ Você pode baixá-lo a partir do site oficial do Docker: https://www.docker.com/
 
 5- Quando o ambiente estiver pronto, você pode acessar o código PHP em seu navegador em http://localhost:8181. 
 
-6- É importante lembrar que o arquivo `docker-compose.yml` deve estar presente no diretório raiz do projeto e o comando `docker-compose up -d` deve ser executado dentro deste diretório.
  
 7- Instale o Codecption para os testes automatizados, no terminal execute esse comando: `composer require "codeception/codeception" --dev`
 
