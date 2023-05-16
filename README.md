@@ -7,7 +7,6 @@ Para rodar os exercicios PHP  usando o Docker, siga estes passos:
 Você pode baixá-lo a partir do site oficial do Docker: https://www.docker.com/
 
 2- Execute o seguinte comando no terminal, dentro do diretório raiz do seu projeto:
-
 `docker-compose up -d`
 
 5- Quando o ambiente estiver pronto, você pode acessar o código PHP em seu navegador em http://localhost:8181. 
