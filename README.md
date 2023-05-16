@@ -1,4 +1,3 @@
-# ExerciciosPHP
 
 <h1> Como Rodar </h1>
 
