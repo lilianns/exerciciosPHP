@@ -2,19 +2,19 @@
 body {
 	font-family: Arial, sans-serif;
 	background-color: #F5F5F5;
-	}
+}
 
 form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin-top: 50px;
-	}
+}
 
 label {
 	margin-bottom: 10px;
 	font-size: 18px;
-	}
+}
 
 input[type="text"] {
 	padding: 10px;
@@ -24,7 +24,7 @@ input[type="text"] {
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
 	width: 300px;
 	font-size: 18px;
-	}
+}
 
 input[type="submit"] {
 	background-color: #4CAF50;
@@ -35,9 +35,9 @@ input[type="submit"] {
 	cursor: pointer;
 	width: 120px;
 	font-size: 18px;
-	}
+}
 
 input[type="submit"]:hover {
 	background-color: #3e8e41;
-	}
+}
 	
