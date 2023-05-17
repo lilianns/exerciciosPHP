@@ -14,12 +14,13 @@ class Exericio3Cest
     // tests
     public function FromExercicio3Test(AcceptanceTester $I)
     {
-    $I->amOnPage("/Exercicio3");
 
-     $I->fillField("nome", "maria");
-     $I->fillField("idade", "25");
-     $I->fillField("feminino", "masculino");
-     $I->click('Enviar');
+        $I->amOnPage("/Exercicio3");
+
+        $I->fillField("nome", "maria");
+        $I->fillField("idade", "25");
+        $I->fillField("feminino", "masculino");
+        $I->click('Enviar');
      
     }
 }
