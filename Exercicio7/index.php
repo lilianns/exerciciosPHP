@@ -8,11 +8,11 @@
         <title> Exercicio 7 </title>
         </head>
 <body>
-        <form action="Exercicio5/index.php" method="get">
+        <form action="Exercicio7/index.php" method="get">
                 <label for="livro">Nome do Livro:</label>
                 <input type="text" id="livro" name="livro">
-                <label for="tipo-usuario">Tipo de Usuário:</label>
-                <select id="tipo-usuario">
+                <label for="tipousuario">Tipo de Usuário:</label>
+                <select id="tipousuario" name="tipousuario">
                         <option value="">Selecione</option>
                         <option value="professor">Professor</option>
                         <option value="aluno">Aluno</option>
