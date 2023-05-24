@@ -6,11 +6,11 @@
         <meta name="viewport" content="width=drive-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <title> Exercicio 7 </title>
-	</head>
+        </head>
 <body>
-	<form action="Exercicio5/index.php" method="get">
-	        <label for="livro">Nome do Livro:</label>
-		<input type="text" id="livro" name="livro">
+        <form action="Exercicio5/index.php" method="get">
+                <label for="livro">Nome do Livro:</label>
+                <input type="text" id="livro" name="livro">
                 <label for="tipo-usuario">Tipo de Usuário:</label>
                 <select id="tipo-usuario">
                         <option value="">Selecione</option>
@@ -18,6 +18,6 @@
                         <option value="aluno">Aluno</option>
                 </select>
                 <input type="submit" value="Gerar Recibo">
-	</form>
+        </form>
 </body>
 </html>

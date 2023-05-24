@@ -42,8 +42,7 @@ select{
     flex: content;
     text-align: center;
 }
-  
-  
+
 input[type="submit"] {
     background-color: #3699c7;
     border: none;
@@ -55,5 +54,3 @@ input[type="submit"] {
     cursor: pointer;
     margin-left: 20px;
 }
-  
-  
