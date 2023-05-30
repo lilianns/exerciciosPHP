@@ -15,18 +15,20 @@
         <label for="idade">Insira sua idade:</label>
         <input type="text" name="idade" id="idade">
         <br>
-        <label for="feminino">Informe seu sexo:</label>
-        <input type="text" name="feminino" id="feminino">
-        <br>
+        <label for="genero">Informe seu sexo:</label>
+        <select name="genero" id="genero">
+            <option value="feminino">Feminino</option>
+            <option value="masculino">Masculino</option>
+        </select>
         <input type="submit" value="Enviar">
 </form>
 <?php
-        if (isset($_GET["nome"]) && isset($_GET["idade"]) && isset($_GET["feminino"])) {
+        if (isset($_GET["nome"]) && isset($_GET["idade"]) && isset($_GET["genero"])) {
             $nome = $_GET["nome"];
             $idade = $_GET["idade"];
-            $feminino = $_GET["feminino"];
+            $genero = $_GET["genero"];
 
-            if ($idade < 25 && ($feminino == "sim" || $feminino == "feminino")) {
+            if ($idade < 25 && $genero =="feminino") {
                 echo "<p class='aceita'>".$nome." --- ACEITA</p>";
             } else {
             echo "<p class='nao-aceita'>".$nome." --- NAO ACEITA</p>";
