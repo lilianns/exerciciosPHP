@@ -17,22 +17,22 @@
     $Divisor = NULL;
     if (key_exists('Divisor', $_GET)){
         $Divisor = $_GET["Divisor"];
-    }
     
-    if ($Divisor % 10 == 0 && $Divisor % 5 == 0 && $Divisor % 2 == 0) {
-        echo "<h1> $Divisor é divisível por 10, 5 e 2 </h1>";
-    }
-    elseif ($Divisor % 10 == 0) {
-        echo "<h1> $Divisor é divisível por 10</h1>";
-    }
-    elseif ($Divisor % 5 == 0) {
-        echo "<h1> $Divisor é divisível por 5</h1>";
-    }
-    elseif ($Divisor % 2 == 0) {
-        echo "<h1> $Divisor é divisível por 2</h1>";
-    }
-    else {
-        echo "<h1> $Divisor não é divisível por 10, 5 e nem por 2.</h1>";
+        if ($Divisor % 10 == 0 && $Divisor % 5 == 0 && $Divisor % 2 == 0) {
+            echo "<h1> $Divisor é divisível por 10, 5 e 2 </h1>";
+        }
+        elseif ($Divisor % 10 == 0) {
+            echo "<h1> $Divisor é divisível por 10</h1>";
+        }
+        elseif ($Divisor % 5 == 0) {
+            echo "<h1> $Divisor é divisível por 5</h1>";
+        }
+        elseif ($Divisor % 2 == 0) {
+            echo "<h1> $Divisor é divisível por 2</h1>";
+        }
+        else {
+            echo "<h1> $Divisor não é divisível por 10, 5 e nem por 2.</h1>";
+        }
     }
 ?>
 </body>
