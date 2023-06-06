@@ -1,4 +1,4 @@
-form {
+form{
     width: 50%;
     margin: auto;
     display: flex;
@@ -6,6 +6,19 @@ form {
     align-items: center;
     background-color: #f5f5f5;
     box-shadow: #444;
+}
+
+.sol,.valido {
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(19, 20, 20);
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Open Sans';
+    text-align: center;
+    margin: 5px;
 }
     
 h2 {
