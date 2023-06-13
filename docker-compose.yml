@@ -6,3 +6,18 @@ services:
       - 8181:80
     volumes: 
       - ./:/var/www/html
+  
+  database:
+    image: mariadb
+    environment:
+      MARIADB_ROOT_PASSWORD: senha1
+      MARIADB_DATABASE: exercicio10
+      MARIADB_USER: user_lilian
+      MARIADB_PASSWORD: senha
+
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - 8585:80
+    environment:
+      - PMA_ARBITRARY=1
