@@ -27,17 +27,17 @@
         $num2 = 0;
         $num3 = 0;
     }
-        if (($num1 + $num2 > $num3) && ($num1 + $num3 > $num2) && ($num2 + $num3 > $num1)) {
-            if (($num1 == $num2) && ($num2 == $num3)) {
+    if (($num1 + $num2 > $num3) && ($num1 + $num3 > $num2) && ($num2 + $num3 > $num1)) {
+        if (($num1 == $num2) && ($num2 == $num3)) {
             echo  '<p>Triângulo equilátero</p>';
         } else if (($num1 == $num2) || ($num1 == $num3) || ($num2 == $num3)) {
             echo '<p>Triângulo isósceles</p>';
         } else {
             echo '<p>Triângulo escaleno</p>';
         }
-        } else {
-            echo '<p>Os valores informados não formam um triângulo</p>';    
-        }
+    } else {
+        echo '<p>Os valores informados não formam um triângulo</p>';    
+    }
 ?>
 </body>
 
