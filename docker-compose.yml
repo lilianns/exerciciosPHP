@@ -11,7 +11,7 @@ services:
     image: mariadb
     environment:
       MARIADB_ROOT_PASSWORD: senha1
-      MARIADB_DATABASE: exercicio10
+      MARIADB_DATABASE: titans
       MARIADB_USER: user_lilian
       MARIADB_PASSWORD: senha
 
