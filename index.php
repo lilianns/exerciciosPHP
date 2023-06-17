@@ -16,8 +16,11 @@
 			<li><a href="/Exercicio8/">Exercício 8</a></li>
 			<li><a href="/Exercicio9/form.html">Exercício 9</a></li>
 			<li><a href="/Exercicio10/form.html">Exercício 10</a></li>
+<<<<<<< HEAD
 			<li><a href="/Exercicio11/form.php">Exercício 11</a></li>
 
+=======
+>>>>>>> 03e65d8 (Adicionando o Backend e o css e arrumando o indice)
 		</ul>
 	</body>
 </html>
