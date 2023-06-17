@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="style.css">
+
+<?php
+    if (isset($_GET['numeros'])) {
+        $numeros = explode(',', $_GET['numeros']);
+        $somaPositivos = 0;
+        $totalNegativos = 0;
+        $count = count($numeros);
+
+        for ($i = 0; $i < $count; $i++) {
+            $numero = $numeros[$i];
+
+            if ($numero > 0) {
+                $somaPositivos += $numero;
+            } elseif ($numero < 0) {
+                $totalNegativos++;
+            }
+        }
+
+        echo '<p class="resultado"> Os números que você digitou: ' . implode(", ", $numeros) . '</p>';
+        echo '<p class="resultado"> A soma dos números positivos é: ' . $somaPositivos . '</p>';
+        echo '<p class="resultado"> O total de números negativos é: ' . $totalNegativos . '</p>';
+
+
+        // Botão para voltar ao formulário
+        echo '<form action="form.html" method="get">
+            <input type="submit" value="Voltar">
+            </form>';
+    }
+?>
