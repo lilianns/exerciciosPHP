@@ -10,7 +10,7 @@
 
 <body>
 	<form action="Exercicio6/index.php" method="get">
-		<label> Informe 1 número inteiro </label>
+		<label> Informe 1 número inteiro entre 1 e 12 para ser exibido o mês correspondente</label>
 		<input type="text" id="num" name="num">
 		<input type="submit" value="Enviar">
 	</form>
