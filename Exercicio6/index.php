@@ -9,11 +9,42 @@
 	</head>
 
 <body>
-	<form action="Exercicio6/index.php" method="get">
+	<form action="" method="get">
 		<label> Informe 1 número inteiro entre 1 e 12 para ser exibido o mês correspondente</label>
 		<input type="text" id="num" name="num">
 		<input type="submit" value="Enviar">
 	</form>
 </body>
+
+<?php
+
+    if (key_exists('num', $_GET)){
+    $num = $_GET['num'];
+    }
+    
+    $meses = array(
+        1 => 'janeiro',
+        2 => 'fevereiro',
+        3 => 'março',
+        4 => 'abril',
+        5 => 'maio',
+        6 => 'junho',
+        7 => 'julho',
+        8 => 'agosto',
+        9 => 'setembro',
+        10 => 'outubro',
+        11 => 'novembro',
+        12 => 'dezembro'
+    );
+
+    if ($num >= 1 && $num <= 12) {
+        echo "<div class='result'>O número $num corresponde ao mês de " . $meses[$num] . ".</div>";
+    } else {
+        echo "<div class='result'>Não existe mês com esse número.</div>";
+    }
+    
+
+?>
+
 
 </html>
