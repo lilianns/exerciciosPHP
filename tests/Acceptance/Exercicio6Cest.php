@@ -39,17 +39,19 @@ class Exercicio6Cest
             12 => 'dezembro'
         );
 
-        //  testando o valor correspondente
-    foreach ($meses as $num => $mes) {
-        $I->amOnPage('/Exercicio6');
-        $I->fillField('num', $num);
-        $I->click('Enviar');
-       // if ($num >= 1 && $num <= 12) {
-        //    $I->see("O número $num corresponde ao mês de $mes.");
-       // } else {
-          //  $I->see("Não existe mês com esse número.");
-        //}
-    }
+        // Itera por todos os meses, testando o valor correspondente
+        foreach ($meses as $num => $mes) {
+            $I->amOnPage('/Exercicio6');
+            $I->fillField('num', $num);
+            $I->click('Enviar');
+            if ($num >= 1 && $num <= 12) {
+                $I->see("O número $num corresponde ao mês de $mes.");
+            } else {
+                $I->see("Não existe mês com esse número.");
+            }
+        }
+
+        
+}
 }
 
-}
