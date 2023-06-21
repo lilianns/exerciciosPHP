@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Tests\Acceptance;
 
 use Tests\Support\AcceptanceTester;
@@ -24,7 +23,7 @@ class Exercicio6Cest
          * fora desse intervalo, informar que não existe mês com este número */
         $I->amOnPage('/Exercicio6');
 
-        $meses = array(
+        $meses = [
             1 => 'janeiro',
             2 => 'fevereiro',
             3 => 'março',
@@ -37,21 +36,14 @@ class Exercicio6Cest
             10 => 'outubro',
             11 => 'novembro',
             12 => 'dezembro'
-        );
+        ];
 
-        // Itera por todos os meses, testando o valor correspondente
-        foreach ($meses as $num => $mes) {
-            $I->amOnPage('/Exercicio6');
+        for ($num = 1; $num <= 12; $num++) {
             $I->fillField('num', $num);
             $I->click('Enviar');
-            if ($num >= 1 && $num <= 12) {
-                $I->see("O número $num corresponde ao mês de $mes.");
-            } else {
-                $I->see("Não existe mês com esse número.");
-            }
+
+            $mes = $meses[$num];
+            $I->see("O número $num corresponde ao mês de $mes.");
         }
-
-        
+    }
 }
-}
-
