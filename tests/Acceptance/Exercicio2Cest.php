@@ -25,19 +25,23 @@ class Exercicio2Cest
 
         $I->fillField("Divisor", "5");
         $I->click('Enviar');
-        $I->see('É divisível por 5');
+        $I->see('5 é divisível por 5');
 
         $I->fillField("Divisor", "7");
         $I->click('Enviar');
-        $I->see('Não é divisível por 10, 5 e nem por 2.');
+        $I->see('7 não é divisível por 10, 5 e nem por 2.');
 
         $I->fillField("Divisor", "10");
         $I->click('Enviar');
-        $I->see('É divisível por 10');
+        $I->see('10 é divisível por 10, 5 e 2');
 
         $I->fillField("Divisor", "12");
         $I->click('Enviar');
-        $I->see('É divisível por 2');
+        $I->see('12 é divisível por 2');
+
+        $I->fillField("Divisor", "20");
+        $I->click('Enviar');
+        $I->see('20 é divisível por 10, 5 e 2');
 
     }
 }

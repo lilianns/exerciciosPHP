@@ -14,43 +14,43 @@ class Exercicio3Cest
     // tests
     public function FromExercicio3Test(AcceptanceTester $I)
     {
-    $I->amOnPage("/Exercicio3");
+        $I->amOnPage("/Exercicio3");
 
-    $I->fillField("nome", "maria");
-    $I->fillField("idade", "24");
-    $I->fillField("feminino", "masculino"); //teste do sexo
-    $I->click('Enviar');
+        $I->fillField("nome", "maria");
+        $I->fillField("idade", "24");
+        $I->selectOption("select[name='genero']", "masculino"); //teste do sexo
+        $I->click('Enviar');
 
-    $I->see(" --- NAO ACEITA");
+        $I->see(" --- NAO ACEITA");
 
 
     }
 
     public function FromExercicio3AceitaTest(AcceptanceTester $I)
     {
-    $I->amOnPage("/Exercicio3");
+        $I->amOnPage("/Exercicio3");
 
-    
-    $I->fillField("nome", "maria");
-    $I->fillField("idade", "24");
-    $I->fillField("feminino", "feminino");
-    $I->click('Enviar');
+        
+        $I->fillField("nome", "maria");
+        $I->fillField("idade", "24");
+        $I->selectOption("select[name='genero']", "feminino");
+        $I->click('Enviar');
 
-    $I->see(" --- ACEITA");
+        $I->see(" --- ACEITA");
 
 
     }
 
     public function FromExercicio3IdadeTest(AcceptanceTester $I)
     {
-    $I->amOnPage("/Exercicio3");
-        
-    $I->fillField("nome", "maria");
-    $I->fillField("idade", "26");  //teste de idade
-    $I->fillField("feminino", "feminino");
-    $I->click('Enviar');
+        $I->amOnPage("/Exercicio3");
+            
+        $I->fillField("nome", "maria");
+        $I->fillField("idade", "26");  //teste de idade
+        $I->selectOption("select[name='genero']", "feminino");
+        $I->click('Enviar');
 
-    $I->see(" --- NAO ACEITA");
+        $I->see(" --- NAO ACEITA");
 
 
     }
