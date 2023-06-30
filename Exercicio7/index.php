@@ -11,8 +11,8 @@
         <form action="" method="get">
                 <label for="livro">Nome do Livro:</label>
                 <input type="text" id="livro" name="livro">
-                <label for="tipousuario">Tipo de Usuário:</label>
-                <select id="tipousuario" name="tipousuario">
+                <label for="tipoUsuario">Tipo de Usuário:</label>
+                <select id="tipoUsuario" name="tipoUsuario">
                         <option value="">Selecione</option>
                         <option value="professor">Professor</option>
                         <option value="aluno">Aluno</option>
@@ -22,37 +22,37 @@
 <?php
 
         $livro = "";
-        $tipousuario = "";
+        $tipoUsuario = "";
 
         if (array_key_exists('livro', $_GET)) {
         $livro = $_GET['livro'];
         }
             
         if (array_key_exists('tipousuario', $_GET)) {
-        $tipousuario = $_GET['tipousuario'];
+        $tipoUsuario = $_GET['tipousuario'];
         }
 
-        if ($livro  && $tipousuario) {
-                if ($tipousuario == "professor") {
+        if ($livro  && $tipoUsuario) {
+                if ($tipoUsuario == "professor") {
                 $prazoDevolucao = 10;
 
-                echo '<div class="recibo">';
-                echo "<h2>Recibo:</h2>";
-                echo "<p>Livro: $livro </p>";
-                echo "<p>Tipo de usuário: Professor </p>";
-                echo "<p> Prazo de devolução: $prazoDevolucao dias a partir de hoje <p>";
+                        echo '<div class="recibo">';
+                        echo "<h2>Recibo:</h2>";
+                        echo "<p>Livro: $livro </p>";
+                        echo "<p>Tipo de usuário: Professor </p>";
+                        echo "<p> Prazo de devolução: $prazoDevolucao dias a partir de hoje <p>";
 
-        } elseif ($tipousuario == "aluno") {
+                } elseif ($tipoUsuario == "aluno") {
                 $prazoDevolucao = 3;
 
-                echo '<div class="recibo">';
-                echo "<h2>Recibo:</h2>";
-                echo "<p>Livro: $livro</p>";
-                echo "<p>Tipo de usuário: Aluno</p>";
-                echo "<p> Prazo de devolução: $prazoDevolucao dias a partir de hoje <p>";
+                        echo '<div class="recibo">';
+                        echo "<h2>Recibo:</h2>";
+                        echo "<p>Livro: $livro</p>";
+                        echo "<p>Tipo de usuário: Aluno</p>";
+                        echo "<p> Prazo de devolução: $prazoDevolucao dias a partir de hoje <p>";
 
+                }
         }
-}
 ?>
 </body>
 </html>
