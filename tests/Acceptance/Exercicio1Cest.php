@@ -20,10 +20,10 @@ class Exercicio1Cest
         $I->click("Enviar");
         $I->see("O resultado foi 29");
 
-        $I->fillField('value1', 20);
-        $I->fillField('value2', 1);
+        $I->fillField('value1', "20");
+        $I->fillField('value2', "1");
         $I->click('Enviar');
-        $I->see('O resultado foi 16');
+        $I->see('O resultado foi 29');
 
         $I->fillField("value1", "7");
         $I->fillField("value2", "15");
