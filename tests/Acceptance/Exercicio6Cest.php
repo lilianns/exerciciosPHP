@@ -46,4 +46,14 @@ class Exercicio6Cest
             $I->see("O número $num corresponde ao mês de $mes.");
         }
     }
+
+    public function VerificarExercicio6Test(AcceptanceTester $I)
+    {
+        $I->amOnPage('/Exercicio6');
+        $I->fillField('num','15');
+        $I->click('Enviar');
+        $I->see('Não existe mês correspondente para o número informado.');
+
+    }
+
 }
