@@ -31,3 +31,14 @@ Isso irá baixar e instalar as dependências necessárias, incluindo o Codecepti
 php vendor/bin/codecept run --steps
 ```
  Certifique-se de que está na raiz do projeto ao executar o comando.
+
+ <h2> Para acessar o banco de dados com o phpMyAdmin a partir do Exercício 10: </h2>
+
+1- Verifique se a extensão mysqli está habilitada no PHP. Você pode verificar isso verificando o arquivo php.ini do PHP.
+
+2- Você pode acessar o banco em seu navegador: http://localhost:8585.
+
+3- Utilize o servidor, o usuário e a senha configurada no arquivo `docker-compose.yml` para fazer login no phpMyAdmin.
+
+4- Certifique-se de que o ambiente Docker esteja em execução antes de acessar o banco de dados. 
+ 
