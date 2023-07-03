@@ -16,26 +16,29 @@
     </form>
 
 <?php
-    if (isset($_GET['numero'])) 
+    if (isset($_GET['numero'])) {
         $numero = $_GET['numero']; 
 
-    if ($numero === '') {
-        echo '<p>Erro: Nenhum número inserido!</p>';
+        if ($numero === '') {
+            echo '<p>Erro: Nenhum número inserido!</p>';
+        } else {
+            echo '<table>';
+            echo '<tr>';
+            echo '<th> Tabuada do número: ' . $numero . '</th>';
+            echo '</tr>';
+
+            for ($i = 1; $i <= 10; $i++) {
+                echo '<tr>';
+                echo '<td>' . $numero . ' X ' . $i . ' = ' . ($numero * $i) . '</td>';
+                echo '</tr>';
+            }
+
+            echo '</table>';
+            include("tabuada.php");
+        }
     } else {
-    echo '<table>';
-    echo '<tr>';
-    echo '<th> Tabuada do número: ' . $numero . '</th>';
-    echo '</tr>';
-
-    for ($i = 1; $i <= 10; $i++) {
-        echo '<tr>';
-        echo '<td>' . $numero . ' X ' . $i . ' = ' . ($numero * $i) . '</td>';
-        echo '</tr>';
+        $numero = '';
     }
-
-    echo '</table>';
-    include("tabuada.php");
-}
 ?>
 </body>
 </html>
