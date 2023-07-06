@@ -16,14 +16,14 @@ class Exercicio7Cest
     {
         $I->amOnPage("/Exercicio7");
         $I->fillField("livro", "Nome do livro");
-        $I->selectOption("tipousuario", "professor");
+        $I->selectOption("tipoUsuario", "professor");
         $I->click("Gerar Recibo");
         $I->see("Livro: Nome do livro");
         $I->see("Tipo de usuário: Professor");
         $I->see("Prazo de devolução: 10 dias a partir de hoje");
 
         $I->fillField("livro", "Lilian");
-        $I->selectOption("tipousuario", "aluno");
+        $I->selectOption("tipoUsuario", "aluno");
         $I->click("Gerar Recibo");
         $I->see("Livro: Lilian");
         $I->see("Tipo de usuário: Aluno");
