@@ -17,13 +17,13 @@ class Exercicio9Cest
     
         $I->amOnPage('/Exercicio9');
 
-        $I->fillField("num1", "3");
+        $I->fillField("countRepeat", "3");
         $I->click('Enviar');
         $I->see("SOL");
         $I->see("SOL");
         $I->see("SOL");
 
-        $I->fillField("num1", "abc");
+        $I->fillField("countRepeat", "abc");
         $I->click('Enviar');
         $I->see("Por favor, insira um número válido.");
         

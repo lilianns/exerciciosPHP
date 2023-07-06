@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="style.css">
 
 <?php
-if (isset($_POST["numero1"])) {
-    $numero = $_POST["numero1"];
+if (isset($_POST["countRepeat"])) {
+    $repeat = $_POST["countRepeat"];
 
-    if (is_numeric($numero)) {
-    for ($i = 0; $i < $numero; $i++) {
+    if (is_numeric($repeat)) {
+    for ($i = 0; $i < $repeat; $i++) {
             echo "<div class='sol'>SOL</div> ";
     }
     } else {
