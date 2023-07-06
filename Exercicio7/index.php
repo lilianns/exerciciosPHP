@@ -26,10 +26,10 @@
 
         if (array_key_exists('livro', $_GET)) {
         $livro = $_GET['livro'];
-        }
+        
             
-        if (array_key_exists('tipousuario', $_GET)) {
-        $tipoUsuario = $_GET['tipousuario'];
+        if (array_key_exists('tipoUsuario', $_GET)) {
+        $tipoUsuario = $_GET['tipoUsuario'];
         }
 
         if ($livro  && $tipoUsuario) {
@@ -53,6 +53,7 @@
 
                 }
         }
+}
 ?>
 </body>
 </html>
