@@ -33,12 +33,12 @@
 
         $sql="INSERT INTO exercicio10(numeros, somaPositivos, totalNegativos) 
             VALUES ('$num', $somaPositivos, $totalNegativos)";
-            if(mysqli_query($conexao, $sql)){
-                echo " Cadastrado com sucesso";
-            }
-            else{
-                echo "erro".mysqli_connect_errno($conexao);
-            }
+        if(mysqli_query($conexao, $sql)){
+            echo " Cadastrado com sucesso";
+        }
+        else{
+            echo "erro".mysqli_connect_errno($conexao);
+        }
 
         mysqli_close($conexao);
     }
