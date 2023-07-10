@@ -23,12 +23,24 @@ if (isset($_POST["number"])) {
         }
 }
 
+
 if ($count >0) {
     echo "<h3>Foi digitado $contador número(s) entre 100 e 200.</h3>";
     echo '<form action="form.html" method="post">
     <button class="btn waves-effect waves-light" type="submit" name="action">Voltar</button>
     </form>';
 }
+    include("conexao.php");
+    echo '</br>';
 
+    $sql="INSERT INTO exercicio13(numeros, resultado) 
+        VALUES ($number, $contador)";
+        if(mysqli_query($conexao, $sql)){
+            echo " Cadastrado com sucesso";
+        }
+        else{
+            echo "erro".mysqli_connect_errno($conexao);
+        }
 
+    mysqli_close($conexao);
 ?>
