@@ -17,6 +17,8 @@
 			<li><a href="/Exercicio9/form.html">Exercício 9</a></li>
 			<li><a href="/Exercicio10/form.html">Exercício 10</a></li>
 			<li><a href="/Exercicio11/form.php">Exercício 11</a></li>
+			<li><a href="/Exercicio12/form.html">Exercício 12</a></li>
+			<li><a href="/Exercicio13/form.html">Exercício 13</a></li>
 		</ul>
 	</body>
 </html>
