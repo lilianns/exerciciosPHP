@@ -40,6 +40,18 @@ if (mysqli_query($conexao, $sql)) {
     echo "Erro: " . mysqli_connect_errno($conexao);
 }
 
+$sql = "SELECT * FROM exercicio12";
+$palavras = mysqli_query($conexao, $sql);
+
+if (mysqli_num_rows($palavras) > 0) {
+        echo "Listagem de dados do banco" . "<br>";
+    while ($linha = mysqli_fetch_assoc($palavras)) {
+        echo "Palavra: " . $linha["palavras"] . "<br>";
+    }
+} else {
+    echo "Nenhum registro encontrado.";
+}
+
 mysqli_close($conexao);
 
 ?>
