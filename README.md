@@ -34,7 +34,7 @@ php vendor/bin/codecept run --steps
 
  <h2> Para acessar o banco de dados com o phpMyAdmin a partir do Exercício 10: </h2>
 
-1- Verifique se a extensão mysqli está habilitada no PHP. Você pode verificar isso verificando o arquivo php.ini do PHP.
+1- Importe o SQL para rodar o sistema e verifique se a extensão mysqli está habilitada no PHP. Você pode verificar isso verificando o arquivo php.ini do PHP.
 
 2- Você pode acessar o banco em seu navegador: http://localhost:8585.
 
