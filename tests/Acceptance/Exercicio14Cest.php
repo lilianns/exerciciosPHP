@@ -24,5 +24,7 @@ class Exericio14Cest
         $I->click('Calcular');
 
         $I->see("Serão necessários 41 anos para que Juca seja maior do que Chico.");
+        $I->seeInDatabase('exercicio14', ['altura_chico' => '150']);
+
     }
 }
