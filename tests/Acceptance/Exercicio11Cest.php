@@ -45,5 +45,7 @@ class Exercicio11Cest
         $I->see("5 X 8 = 40");
         $I->see("5 X 9 = 45");
         $I->see("5 X 10 = 50");
+
+        $I->seeInDatabase('exercicio11', ['numero' => '5', 'tabuada' => '5, 10, 15, 20, 25, 30, 35, 40, 45, 50']);
     }
 }
