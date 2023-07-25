@@ -9,6 +9,8 @@ services:
   
   database:
     image: mariadb
+    ports:
+      - 3306:3306
     environment:
       MARIADB_ROOT_PASSWORD: senha1
       MARIADB_DATABASE: titans
