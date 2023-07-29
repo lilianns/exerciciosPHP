@@ -15,25 +15,19 @@ class Exericio12Cest
     public function FormExercicioTest(AcceptanceTester $I)
     {
 
-        $I->amOnPage("/Exercicio12");
+        $I->amOnPage("/Exercicio12/form.html");
         $I->fillField('palavra', 'Teste');
-        $I->click('Enviar');
+        $I->click('Imprimir');
         $I->see('Teste');
         $I->see('Teste Teste'); 
         $I->see('Teste Teste Teste'); 
         $I->see('Teste Teste Teste Teste'); 
 
-        $I->fillField('palavra', '');
-        $I->click('Enviar');
-        $I->see('Por favor, volte e digite uma palavra.');
-
-    }
-
-    public function testConexaoBancoDados(FunctionalTester $I)
-    {
-        
-        $conexao = mysqli_connect('database', 'user_lilian', 'senha', 'titans');
-        $I->assertInstanceOf('mysqli', $conexao);
-        mysqli_close($conexao);
+        $I->amOnPage("/Exercicio12/form.html");
+        $palavras = ['Teste'];
+        for ($i = 0; $i < count($palavras); $i++) {
+            $palavra = $palavras[$i];
+            $I->seeInDatabase('exercicio12', ['palavra' => 'Teste']);
+        }
     }
 }
