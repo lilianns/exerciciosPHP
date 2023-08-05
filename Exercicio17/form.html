@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Exercicio 17</title>
+</head>
+<body class="gray lighten-4"> 
+    <div class="row">
+        <form class="col s16" id="formulario" action="index.php" method="post">
+          <div class="row">
+            <h4 class="center-align flow-text orange-text text-darken-4">Digite os números para o primeiro vetor:</h4>
+
+            <div class="input-field col s1">
+            <label for="vetor1">Vetor 1:</label>
+            <input type="number" id="vetor1" name="vetor1[]" required>
+            </div>
+
+            <div class="input-field col s1">
+            <label for="vetor1">Vetor 1:</label>
+            <input type="number" id="vetor1" name="vetor1[]" required>
+            </div>
+
+            <div class="input-field col s1">
+            <label for="vetor1">Vetor 1:</label>
+            <input type="number" id="vetor1" name="vetor1[]" required>
+            </div>
+
+            <div class="input-field col s1">
+            <label for="vetor1">Vetor 1:</label>
+            <input type="number" id="vetor1" name="vetor1[]" required>
+            </div>
+
+            <div class="input-field col s1">
+            <label for="vetor1">Vetor 1:</label>
+            <input type="number" id="vetor1" name="vetor1[]" required>
+            </div>
+
+            <div class="input-field col s1">
+            <label for="vetor1">Vetor 1:</label>
+            <input type="number" id="vetor1" name="vetor1[]" required>
+            </div>
+
+            <div class="input-field col s1">
+            <label for="vetor1">Vetor 1:</label>
+            <input type="number" id="vetor1" name="vetor1[]" required>
+            </div>
+
+            <div class="input-field col s1">
+            <label for="vetor1">Vetor 1:</label>
+            <input type="number" id="vetor1" name="vetor1[]" required>
+            </div>
+
+            <div class="input-field col s1">
+            <label for="vetor1">Vetor 1:</label>
+            <input type="number" id="vetor1" name="vetor1[]" required>
+            </div>
+
+            <div class="input-field col s1">
+            <label for="vetor1">Vetor 1:</label>
+            <input type="number" id="vetor1" name="vetor1[]" required>
+            </div>
+            
+            <div class="clearfix"></div>
+            <h4 class="center-align flow-text orange-text text-darken-4">Digite os números para o segundo vetor:</h4>
+
+            <div class="input-field col s1">
+            <label for="vetor2">Vetor 2:</label>
+            <input type="number" id="vetor2" name="vetor2[]" required>
+            </div>
+
+            <div class="input-field col s1">
+            <label for="vetor2"> Vetor 2:</label>
+            <input type="number" id="vetor2" name="vetor2[]" required>
+            </div>
+
+            <div class="input-field col s1">
+            <label for="vetor2">Vetor 2:</label>
+            <input type="number" id="vetor2" name="vetor2[]" required>
+            </div>
+
+            <div class="input-field col s1">
+            <label for="vetor2">Vetor 2:</label>
+            <input type="number" id="vetor2" name="vetor2[]" required>
+            </div>
+
+            <div class="input-field col s1">
+            <label for="vetor2">Vetor 2:</label>
+            <input type="number" id="vetor2" name="vetor2[]" required>
+            </div>
+
+            <div class="input-field col s1">
+            <label for="vetor2">Vetor 2:</label>
+            <input type="number" id="vetor2" name="vetor2[]" required>
+            </div>
+
+            <div class="input-field col s1">
+            <label for="vetor2">Vetor 2:</label>
+            <input type="number" id="vetor2" name="vetor2[]" required>
+            </div>
+
+            <div class="input-field col s1">
+            <label for="vetor2">Vetor 2:</label>
+            <input type="number" id="vetor2" name="vetor2[]" required>
+            </div>
+
+            <div class="input-field col s1">
+            <label for="vetor2">Vetor 2:</label>
+            <input type="number" id="vetor2" name="vetor2[]" required>
+            </div>
+
+            <div class="input-field col s1">
+            <label for="vetor2">Vetor 2:</label>
+            <input type="number" id="vetor2" name="vetor2[]" required>
+            </div>
+                
+            <div class="center-align"> 
+                <button class="btn  orange darken-4" type="submit">Enviar</button>
+            </div>
+</form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#formulario").submit(function(event) {
+                event.preventDefault();
+                var formData = $(this).serialize();
+    
+                // Requisição AJAX
+                $.ajax({
+                    type: "POST", 
+                    url: "index.php", 
+                    data: formData, 
+    
+                    success: function(response) {
+                        console.log("Requisição AJAX enviada com sucesso!");
+                        console.log(response); 
+                    },
+                    error: function(error) {
+                        console.error("Erro na requisição AJAX:");
+                        console.error(error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
