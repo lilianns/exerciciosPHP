@@ -9,23 +9,24 @@ function ParOuImpar($numero) {
     }
 }
 
-$numerosString = $_POST['numeros'];
+if(isset($_POST['numeros'])) {
+    $numerosString = $_POST['numeros'];
+    $numeros = explode(',', $numerosString);
 
-$numeros = explode(',', $numerosString);
+    $resposta = '';
 
-$resposta = '';
+    for ($i = 0; $i < count($numeros); $i++) {
+        $resposta .= "O número {$numeros[$i]} é " . ParOuImpar($numeros[$i]) . ".<br>";
+    }
 
-for ($i = 0; $i < count($numeros); $i++) {
-    $resposta .= "O número {$numeros[$i]} é " . ParOuImpar($numeros[$i]) . ".<br>";
+    echo $resposta;
+
+    $numerosString = implode(',', $numeros);
+
+    $sql = "INSERT INTO exercicio16(numeros, resposta) 
+            VALUES ('$numerosString', '$resposta')"; 
+    mysqli_query($conexao, $sql);
 }
-
-echo $resposta;
-
-$numerosString = implode(',', $numeros);
-
-$sql = "INSERT INTO exercicio16(numeros, resposta) 
-        VALUES ('$numerosString', '$resposta')"; 
-mysqli_query($conexao, $sql); 
 
 mysqli_close($conexao); 
 ?>
