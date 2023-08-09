@@ -25,6 +25,10 @@
     </div>
     <div class="resultado-container">
         <p id="tempo"></p>
+        <button id="CarregarListagem" class="btn waves-effect waves-light">Carregar Listagem</button>
+        <div class="listagem-container">
+            <ul id="listagem"></ul>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
@@ -50,7 +54,27 @@
                     }
                 });
             });
+            
         });
+
+        function carregarListagemDados() {
+                $.ajax({
+                    type: "POST", 
+                    url: "listagem.php",  
+                    success: function(response) {
+                        $("#listagem").html(response);
+                    },
+                    error: function(error) {
+                        console.error("Erro ao carregar a listagem:");
+                        console.error(error);
+                    }
+                });
+            }
+
+            $("#CarregarListagem").click(function() {
+                carregarListagemDados();
+            });
+            
     </script>
 </body>
 </html>
