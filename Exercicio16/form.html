@@ -18,6 +18,10 @@
         <div class="resposta-container">
             <p id="resposta"></p>
         </div>
+        <button id="CarregarListagem" class="btn waves-effect waves-light orange darken-4">Carregar Listagem</button>
+        <div class="listagem-container">
+            <ul id="listagem"></ul>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -25,23 +29,41 @@
             $("#formulario").submit(function(event) {
                 event.preventDefault();
                 var formData = $(this).serialize();
-    
+
                 // Requisição AJAX
                 $.ajax({
                     type: "POST", 
                     url: "index.php", 
                     data: formData, 
-    
+
                     success: function(response) {
                         console.log("Requisição AJAX enviada com sucesso!");
                         console.log(response);
-                        $("#resposta").html(response); 
+                        $("#resposta").html(response);
                     },
                     error: function(error) {
                         console.error("Erro na requisição AJAX:");
                         console.error(error);
                     }
                 });
+            });
+
+            function carregarListagemDados() {
+                $.ajax({
+                    type: "POST", 
+                    url: "listagem.php",  
+                    success: function(response) {
+                        $("#listagem").html(response);
+                    },
+                    error: function(error) {
+                        console.error("Erro ao carregar a listagem:");
+                        console.error(error);
+                    }
+                });
+            }
+
+            $("#CarregarListagem").click(function() {
+                carregarListagemDados();
             });
         });
     </script>
