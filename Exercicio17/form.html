@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Exercicio 17</title>
 </head>
 <body class="gray lighten-4"> 
@@ -115,31 +117,56 @@
                 
             <button class="btn  orange darken-4" type="submit">Enviar</button>
 </form>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $("#formulario").submit(function(event) {
-                event.preventDefault();
-                var formData = $(this).serialize();
-    
-                // Requisição AJAX
-                $.ajax({
-                    type: "POST", 
-                    url: "index.php", 
-                    data: formData, 
-    
-                    success: function(response) {
-                        console.log("Requisição AJAX enviada com sucesso!");
-                        console.log(response); 
-                    },
-                    error: function(error) {
-                        console.error("Erro na requisição AJAX:");
-                        console.error(error);
-                    }
-                });
-            });
+    <div class="resultado-container">
+        <p id="resultado"></p>
+    </div>
+    <button id="CarregarListagem" class="btn waves-effect waves-light orange darken-4">Carregar Listagem</button>
+    <div class="listagem-container">
+        <ul id="listagem"></ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("#formulario").submit(function(event) {
+        event.preventDefault();
+        var formData = $(this).serialize();
+
+        // Requisição AJAX
+        $.ajax({
+            type: "POST", 
+            url: "index.php", 
+            data: formData, 
+
+            success: function(response) {
+                console.log("Requisição AJAX enviada com sucesso!");
+                console.log(response);
+                $("#resultado").html(response);
+            },
+            error: function(error) {
+                console.error("Erro na requisição AJAX:");
+                console.error(error);
+            }
         });
-    </script>
+    });
+
+    function carregarListagemDados() {
+        $.ajax({
+            type: "POST", 
+            url: "listagem.php",  
+            success: function(response) {
+                $("#listagem").html(response);
+            },
+            error: function(error) {
+                console.error("Erro ao carregar a listagem:");
+                console.error(error);
+            }
+        });
+    }
+
+    $("#CarregarListagem").click(function() {
+        carregarListagemDados();
+    });
+});
+</script>
 </body>
 </html>
-
