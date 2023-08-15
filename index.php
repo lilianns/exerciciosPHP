@@ -4,29 +4,32 @@
         <title>Índice</title>
     <style>
         body {
-        padding: 20px;
-        max-width: 400px;
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        background-image: linear-gradient(to bottom, #d3545e, #000407);
-        margin-bottom: 20px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: linear-gradient(to bottom, #d3545e, #000407);
+            font-family: Arial, sans-serif;
         }
 
         .index-container {
-            background-color: #fff;
-            border-radius: 19px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin: 0 auto;
-            padding: 20px;
-        max-width: 400px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 80%;
         }
 
         h1 {
             text-align: center;
             color: #d3545e;
-            font-size: 50px;
+            font-size: 36px;
+            margin-bottom: 20px;
         }
+
         ul {
             list-style: none;
             padding: 0;
@@ -35,13 +38,18 @@
         }
 
         li {
-            margin: 10px ;
+            margin: 15px 0;
         }
 
         a {
             text-decoration: none;
-            color: #333 ;
-            font-size: 30px;
+            color: #333;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #d3545e;
         }
     </style>
     </head>
