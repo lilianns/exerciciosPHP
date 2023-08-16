@@ -10,11 +10,3 @@ actor_suffix: Tester
 extensions:
     enabled:
         - Codeception\Extension\RunFailed
-        
-actor: AcceptanceTester
-modules:
-    enabled:
-        - Db:
-            dsn: 'mysql:host=localhost:3306;dbname=titans' 
-            user: 'user_lilian'
-            password: 'senha'
