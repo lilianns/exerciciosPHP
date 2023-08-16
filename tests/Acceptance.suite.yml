@@ -8,7 +8,11 @@ actor: AcceptanceTester
 modules:
     enabled:
         - PhpBrowser:
-            url: http://localhost:8181
+            url: http://localhost
+        - Db:
+            dsn: 'mysql:host=database;db=titans'
+            user: 'user_lilian'
+            password: 'senha'
 # add Codeception\Step\Retry trait to AcceptanceTester to enable retries
 step_decorators:
     - Codeception\Step\ConditionalAssertion
