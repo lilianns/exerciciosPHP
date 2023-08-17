@@ -15,9 +15,7 @@ if (isset($_POST["number"])) {
                 $contador++;
             } else if ($number == 0  || $number == '') {
                 echo "<h3>Por favor, insira um número válido.</h3>";
-                echo '<form action="form.html" method="post">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Voltar</button>
-                </form>';
+                echo '<a href="form.html" class="btn waves-effect waves-light"> Voltar</a>';
                 die();
             }
         }
@@ -28,11 +26,15 @@ if ($count >0) {
     echo "<h3>Foi digitado $contador número(s) entre 100 e 200.</h3>";
     echo '<a href="form.html" class="btn waves-effect waves-light"> Voltar</a>';
 }
+
+    echo '<a href="listagem.php" class="btn waves-effect waves-light"> Listagem </a>';
+
     include("conexao.php");
     echo '</br>';
 
+    $numbers = implode(',', $numbers);
     $sql="INSERT INTO exercicio13(numeros, resultado) 
-        VALUES ($number, $contador)";
+        VALUES ('$numbers', $contador)";
         if(mysqli_query($conexao, $sql)){
             echo " Cadastrado com sucesso";
         }
