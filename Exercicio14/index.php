@@ -22,11 +22,9 @@ if (isset($_POST["altura_chico"]) && isset($_POST["altura_juca"]) && isset($_POS
     echo '<div class="container">';
     echo '<p class="flow-text"> Serão necessários ' . $anos . ' anos para que Juca seja maior do que Chico.</p>';
 
-    // Botão para voltar ao formulário
-    echo '<form action="form.html" method="get">
-        <input type="submit" value="Voltar" class="btn">
-    </form>';
-    echo '</div>';
+    echo '<a href="form.html" class="btn waves-effect waves-light">Voltar</a>';
+
+    echo '<a href="listagem.php" class="btn waves-effect waves-light">Listagem</a>';
 
     include("conexao.php");
     echo '</br>';
