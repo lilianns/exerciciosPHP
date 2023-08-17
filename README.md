@@ -28,7 +28,11 @@ Isso irá baixar e instalar as dependências necessárias, incluindo o Codecepti
 
 6- Execute o teste com o seguinte comando 
 ```
-php vendor/bin/codecept run --steps
+docker compose exec php-apache php vendor/bin/codecept run 
+```
+7- Para executar um teste específico, utilize o seguinte comando:
+```
+docker compose exec php-apache php vendor/bin/codecept run tests/Acceptance/nome_do_teste.php
 ```
  Certifique-se de que está na raiz do projeto ao executar o comando.
 
