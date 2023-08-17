@@ -10,7 +10,7 @@ modules:
         - PhpBrowser:
             url: http://localhost
         - Db:
-            dsn: 'mysql:host=database;db=titans'
+            dsn: 'mysql:host=database;dbname=titans'
             user: 'user_lilian'
             password: 'senha'
 # add Codeception\Step\Retry trait to AcceptanceTester to enable retries
