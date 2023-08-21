@@ -31,6 +31,12 @@ if (isset($_POST["altura_chico"]) && isset($_POST["altura_juca"]) && isset($_POS
 
     $sql="INSERT INTO exercicio14(altura_chico, altura_juca, crescimento_chico, crescimento_juca, anos) 
         VALUES ($altura_chico, $altura_juca, $crescimento_chico, $crescimento_juca, $anos)";
+    if(mysqli_query($conexao, $sql)){
+        echo " Cadastrado com sucesso";
+    }
+    else{
+        echo "erro".mysqli_connect_errno($conexao);
+    }
 
     mysqli_close($conexao);
 }
