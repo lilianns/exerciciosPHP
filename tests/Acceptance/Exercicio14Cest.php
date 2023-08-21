@@ -36,6 +36,13 @@ class Exericio14Cest
 
         $I->seeInDatabase('exercicio14', ['crescimento_juca' => '3']);
 
+        //listagem
+        $I->amOnPage('/Exercicio14/listagem.php');
 
+        $I->see('Altura Chico: 150 cm
+                Altura Juca: 110 cm
+                Crescimento Chico: 2 cm
+                Crescimento Juca: 3 cm
+                Anos: 41');
     }
 }
