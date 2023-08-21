@@ -24,6 +24,6 @@ class Exericio10Cest
         $I->see("A soma dos números positivos é: 30");
         $I->see("O total de números negativos é: 18");
 
-         $I->seeInDatabase('exercicio10', ['numero' => '10, 20, -1, -2, -6, -8, -1, -2, -6, -8, -1, -2, -6, -8, -1, -2, -6, -8, -1, -2', 'somaPositivos' => '30', 'totalNegativos' => '18']);
+         $I->seeInDatabase('exercicio10', ['numeros' => '10, 20, -1, -2, -6, -8, -1, -2, -6, -8, -1, -2, -6, -8, -1, -2, -6, -8, -1, -2', 'somaPositivos' => '30', 'totalNegativos' => '18']);
     }
 }
