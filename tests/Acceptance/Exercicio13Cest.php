@@ -26,6 +26,13 @@ class Exercicio13Cest
         $I->click('Enviar');
         $I->see("Por favor, insira um número válido.");
 
+        $I->seeInDatabase("exercicio13", ["numeros" => "150,165"]);
+
+        //listagem
+        $I->amOnPage('/Exercicio13/listagem.php');
+
+        $I->see('Números Digitados 156,165
+        Quantos números digitados entre 100 e 200: 2');
         
     }
 }
