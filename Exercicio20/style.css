@@ -1,0 +1,21 @@
+.matriz {
+    font-size: 20px; 
+    color: rgb(3, 56, 19);   
+}
+
+.pares {
+    font-size: 20px; 
+    color: green;   
+}
+
+.impares {
+    font-size: 20px; 
+    color: red;     
+}
+
+tr {
+    background-color: rgb(3, 63, 3);
+    color: rgb(255, 255, 255); 
+    font-size: 16px;
+}
+
