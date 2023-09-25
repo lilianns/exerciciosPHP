@@ -13,21 +13,27 @@ if (isset($_POST["vetor1"])) {
 
     for ($i = 0; $i < $count; $i++) {
         $elemento = $vetor[$i];
-
+    
+        if (!is_numeric($elemento)) {
+            continue;
+        }
+    
+        $elemento = floatval($elemento); 
         if ($elemento > $maior) {
             $maior = $elemento;
         }
-
+    
         if ($elemento < $menor) {
             $menor = $elemento;
         }
-
+    
         if ($elemento % 2 == 0) {
             $totalPares++;
         }
-
+    
         $somaElementos += $elemento;
     }
+    
 
     $percentualPares = ($totalPares / count($vetor)) * 100;
     $media = $somaElementos / count($vetor);
