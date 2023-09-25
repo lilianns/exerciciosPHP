@@ -15,12 +15,20 @@ if (isset($_POST['massaInicial']) && isset($_POST['massaLimite'])) {
     $massaLimite = floatval($_POST['massaLimite']);
 
     $tempoNecessario = calculoTempo($massaInicial, $massaLimite);
-
     echo $tempoNecessario;
 
     include("conexao.php");
+
+    
     $sql = "INSERT INTO exercicio15(massaInicial, massaLimite, tempo) 
             VALUES ('$massaInicial', $massaLimite, $tempoNecessario)";
+
+    
+    if (mysqli_query($conexao, $sql)) {
+    } else {
+        echo "Erro ao inserir dados: " . mysqli_error($conexao);
+    }
+
     mysqli_close($conexao); 
 }
 ?>
