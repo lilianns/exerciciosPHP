@@ -74,6 +74,9 @@
             <li><a href="/Exercicio15/form.html">Exercício 15</a></li>
             <li><a href="/Exercicio16/form.html">Exercício 16</a></li>
             <li><a href="/Exercicio17/form.html">Exercício 17</a></li>
+            <li><a href="/Exercicio18/form.html">Exercício 18</a></li>
+            <li><a href="/Exercicio19/form.html">Exercício 19</a></li>
+            <li><a href="/Exercicio20/form.html">Exercício 20</a></li>
         </ul>
         </div>
         
