@@ -1,28 +1,3 @@
-.resultado-container {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    color: #00695c;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.listagem-container {
-    padding: 10px;
-    margin-top: 20px;
-}
-
-.listagem-container ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.listagem-container li {
-    margin-bottom: 5px;
-}
-
 .inicial {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
