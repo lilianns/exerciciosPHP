@@ -11,8 +11,14 @@ function calculoTempo($massaInicial, $massaLimite) {
 }
 
 if (isset($_POST['massaInicial']) && isset($_POST['massaLimite'])) {
-    $massaInicial = floatval($_POST['massaInicial']);
-    $massaLimite = floatval($_POST['massaLimite']);
+    $massaInicial = 1;
+    $massaLimite = 1;
+
+    if(!is_nan($_POST['massaInicial']) && !is_nan($_POST['massaLimite']))
+    {
+        $massaInicial = floatval($_POST['massaInicial']);
+        $massaLimite = floatval($_POST['massaLimite']);
+    }
 
     $tempoNecessario = calculoTempo($massaInicial, $massaLimite);
     echo $tempoNecessario;

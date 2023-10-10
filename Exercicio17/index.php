@@ -3,7 +3,6 @@ include("conexao.php");
 
 if (isset($_POST["vetor1"])) {
     $vetor = $_POST["vetor1"];
-
     $maior = $vetor[0];
     $menor = $vetor[0];
     $totalPares = 0;

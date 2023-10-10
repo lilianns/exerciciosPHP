@@ -7,9 +7,9 @@ $resultado = mysqli_query($conexao, $selectSql);
 
 if (mysqli_num_rows($resultado) > 0) {
     while ($linha = mysqli_fetch_assoc($resultado)) {
-        echo '<li class="inicial">Massa Inicial: <span class="massaInicial">' . $linha["massaInicial"] . '</span>';
-        echo 'Massa Limite: <span class="massaLimite">' . $linha["massaLimite"] . '</span>';
-        echo '<span class="tempo">Tempo:' . $linha["tempo"] . '</span></li>';
+        echo '<li class="inicial"><span class="massaInicial">Massa Inicial: ' . $linha["massaInicial"] . '</span>';
+        echo '<span class="massaLimite">Massa Limite: ' . $linha["massaLimite"] . '</span>';
+        echo '<span class="tempo">Tempo: ' . $linha["tempo"] . '</span></li>';
     }
 } else {
     echo "<li>Nenhum registro encontrado.</li>";
