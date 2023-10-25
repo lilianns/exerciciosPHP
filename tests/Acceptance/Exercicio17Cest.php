@@ -54,17 +54,10 @@ class Exercicio17Cest
 
         $I->click('Carregar Listagem');
         $I->amOnPage("/Exercicio17/listagem.php");
-        $I->see('Vetor:
-        10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200');
-        $I->see('Maior valor:
-        200');
-        $I->see('Menor valor:
-        10');
-        $I->see('Média:
-        105');
-        $I->see('Percentual de pares:
-        100 %');
-
-
+        $I->see('Vetor: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200');
+        $I->see('Maior valor: 200');
+        $I->see('Menor valor: 10');
+        $I->see('Média: 105');
+        $I->see('Percentual de pares: 100 %');
     }
 }
