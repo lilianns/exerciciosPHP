@@ -1,17 +1,18 @@
 <?php
 include("conexao.php");
 
+$numerosNaoComuns = [];
 if (isset($_POST["numeros"]) && isset($_POST["numeros2"])) {
     $numeros = $_POST["numeros"];
     $numeros2 = $_POST["numeros2"];
     $vetor = explode(",", $numeros);
     $vetor2 = explode(",", $numeros2);
 
+
     if ($vetor === $vetor2) {
         echo "Os vetores são idênticos, todos os números são iguais.";
     } else {
-    $numerosNaoComuns = [];
-    //primeiro vetor
+    
     for ($i = 0; $i < count($vetor); $i++) {
         if (!in_array($vetor[$i], $vetor2)) {
             $numerosNaoComuns[] = $vetor[$i];
@@ -25,22 +26,23 @@ if (isset($_POST["numeros"]) && isset($_POST["numeros2"])) {
     }
 
     $numerosNaoComuns = array_unique($numerosNaoComuns);
-    // Exiba os resultados
      $resultado = "Números não comuns aos dois vetores: ";
     for ($i = 0; $i < count($numerosNaoComuns); $i++) {
         $resultado .= $numerosNaoComuns[$i] . " ";
     }
 
     echo $resultado;
-
+    $NaoComuns = implode(', ', $numerosNaoComuns);
 } 
 }
+
+
 $vetorStr = implode(', ', $vetor);
 $array2 = implode(', ', $vetor2);
-$Naocomuns = implode(', ', $numerosNaoComuns);
+$NaoComuns = implode(', ', $numerosNaoComuns);
 
-$sql = "INSERT INTO exercicio18(vetor, vetor2, Naocomuns) 
-    VALUES ('$vetorStr', '$array2', '$Naocomuns')"; 
+$sql = "INSERT INTO exercicio18(vetor, vetor2, NaoComuns) 
+    VALUES ('$vetorStr', '$array2', '$NaoComuns')"; 
 
 if (mysqli_query($conexao, $sql)) {
 } else {
